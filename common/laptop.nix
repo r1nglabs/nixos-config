@@ -1,0 +1,162 @@
+{ pkgs, config, ... }:
+{
+  imports =
+    [
+      ./system/boot.nix
+      ./system/kernel.nix
+      ./system/lidswitch.nix
+      ./system/upower.nix
+      ./system/power-profiles-daemon.nix
+      ./system/networkmanager.nix
+      ./system/pipewire.nix
+      ./system/bluetooth.nix
+      ./system/nix_settings.nix
+      ./system/user.nix
+      ./system/unfree.nix
+      ./system/timezone.nix
+      ./system/nodefault.nix
+
+      ./base/nvim.nix
+      ./base/wget.nix
+      ./base/zsh.nix
+      ./base/git.nix
+      ./base/curl.nix
+      ./base/p7zip.nix
+      ./base/jq.nix
+      ./base/ripgrep.nix
+      ./base/fzf.nix
+      ./base/fd.nix
+      ./base/fastfetch.nix
+      ./base/tealdeer.nix
+      ./base/flatpak.nix
+      ./base/yazi.nix
+      ./base/brightnessctl.nix
+      ./base/btop.nix
+      ./base/bintools.nix
+      ./base/v2raya.nix
+      ./base/emacs.nix
+      ./base/alsa-utils.nix
+      ./base/keyd.nix
+
+      ./graphics/display_manager.nix
+      ./graphics/niri.nix
+      ./graphics/graphics.nix
+      ./graphics/fonts.nix
+      ./graphics/fcitx.nix
+      ./graphics/scx.nix
+      ./graphics/file-roller.nix
+      ./graphics/gnome-text-editor.nix
+      ./graphics/noctalia.nix
+      ./graphics/nautilus.nix
+      ./graphics/loupe.nix
+      ./graphics/mpv.nix
+      ./graphics/foot.nix
+      ./graphics/xwayland.nix
+      ./graphics/firefox.nix
+      ./graphics/ungoogled-chromium.nix
+      ./graphics/fuzzel.nix
+      ./graphics/clash_verge_rev.nix
+      ./graphics/localsend.nix
+      ./graphics/kdbx.nix
+      ./graphics/mission-center.nix
+      ./graphics/wdisplays.nix
+      ./graphics/crosspipe.nix
+      ./graphics/easyeffects.nix
+      ./graphics/appimage.nix
+      ./graphics/gnome-decoder.nix
+      ./graphics/screen_shot.nix
+      ./graphics/gnome-text-editor.nix
+      ./graphics/libnotify.nix
+      #./graphics/gnome.nix
+
+
+      # cli
+      #./modules/sshd.nix
+      #./modules/rclone.nix
+      #./modules/mpd.nix
+      #./modules/pentesting.nix
+      #./modules/tun2socks.nix
+      #./modules/rust.nix
+      #./modules/lilypond.nix
+      ./modules/tts.nix
+      ./modules/tcpdump.nix
+      ./modules/ydict.nix
+      ./modules/typst.nix
+      ./modules/wayland_clipboard_utilities.nix
+      ./modules/c.nix
+      ./modules/python.nix
+      ./modules/go.nix
+      ./modules/zig.nix
+      ./modules/java.nix
+      ./modules/vulkan-tools.nix
+      ./modules/tombi.nix
+      ./modules/pciutils.nix
+      ./modules/ffmpeg.nix
+      ./modules/nethogs.nix
+      ./modules/podman.nix
+
+      # gui
+      ./modules/gram.nix
+      ./modules/steam.nix
+      ./modules/mangohud.nix
+      ./modules/gamemode_gamescope.nix
+      ./modules/telegram-desktop.nix
+      ./modules/zotero.nix
+      ./modules/sqlitebrowser.nix
+      ./modules/fragments.nix
+      ./modules/buffer.nix
+      ./modules/readest.nix
+      ./modules/imhex.nix
+      ./modules/wireshark.nix
+      ./modules/typesetter.nix
+      ./modules/zathura.nix
+      ./modules/splayer.nix
+      ./modules/lingot.nix
+      ./modules/gmetronome.nix
+      ./modules/qbittorrent.nix
+      ./modules/upscaler.nix
+      ./modules/obs.nix
+      #./modules/musescore.nix
+      #./modules/digikam.nix
+      #./modules/d-spy.nix
+      #./modules/libreoffice.nix
+      #./modules/fluffychat.nix
+      #./modules/apostrophe.nix
+      #./modules/bottles.nix
+      #./modules/anytype.nix
+      #./modules/sunshine.nix
+      #./modules/vesktop.nix
+      #./modules/rustdesk.nix
+      #./modules/pandoc.nix
+    ];
+
+  environment.systemPackages = with pkgs; [
+    #door-knocker
+    #pulseaudio
+    #playerctl
+    #reaper
+    #rawtherapee
+    #darktable
+    #vkdt
+    #digikam
+    #waypaper
+    #ghostty
+    #awww
+    #hyprpicker
+    #starship
+    #lm_sensors
+    #overskride
+    #appimage-run
+    #sdcv
+    #wf-recorder
+    #zed-editor
+    #biblioteca
+    #cambalache
+    #hydrus
+  ];
+  
+  environment.shellAliases = {
+    say = ''f(){ echo "$*" | ${pkgs.piper-tts}/bin/piper --model ~/area/tts/en_US-amy/en_US-amy-medium.onnx --output-file - | ${pkgs.ffmpeg}/bin/ffplay -nodisp -autoexit -loglevel error -; unset -f f; }; f'';
+    ew = ''f(){ ${pkgs.ydict}/bin/ydict "$1"; echo "that $1" | ${pkgs.piper-tts}/bin/piper --model ~/area/tts/en_US-amy/en_US-amy-medium.onnx --output-file - | ${pkgs.ffmpeg}/bin/ffplay -nodisp -autoexit -loglevel error -; }; f'';
+  };
+}
