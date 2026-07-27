@@ -37,6 +37,7 @@
       ../../common/base/bintools.nix
       ../../common/base/v2raya.nix
       ../../common/base/emacs.nix
+      ../../common/base/alsa-utils.nix
       ../../common/base/keyd.nix
 
       ../../common/graphics/display_manager.nix
@@ -87,6 +88,7 @@
       ../../common/modules/python.nix
       ../../common/modules/go.nix
       ../../common/modules/zig.nix
+      ../../common/modules/java.nix
       ../../common/modules/vulkan-tools.nix
       ../../common/modules/tombi.nix
       ../../common/modules/pciutils.nix
@@ -127,7 +129,7 @@
     ];
 
   environment.systemPackages = with pkgs; [
-    #alsa-utils
+
     #rustdesk-flutter
     #door-knocker
     #pandoc
