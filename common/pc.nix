@@ -4,9 +4,7 @@
     [
       ./system/boot.nix
       ./system/kernel.nix
-      ./system/lidswitch.nix
       ./system/upower.nix
-      ./system/power-profiles-daemon.nix
       ./system/networkmanager.nix
       ./system/pipewire.nix
       ./system/bluetooth.nix
