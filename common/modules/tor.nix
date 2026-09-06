@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    typst
-    tinymist
+    tor
+    tor-browser
   ];
 }

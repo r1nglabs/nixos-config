@@ -7,6 +7,12 @@
     ];
   system.stateVersion = "26.05";
 
+
+  # 修复屏幕随机位置闪烁像素线
+  boot.kernelParams = [
+    "xe.enable_psr=0"
+  ];
+
   networking.hostName = "li";
   networking.networkmanager.wifi.backend = "wpa_supplicant";
 

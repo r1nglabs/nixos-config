@@ -7,6 +7,7 @@
       numpy
       pillow
       matplotlib
+      pycryptodome
     ]))
 
     basedpyright # lsp

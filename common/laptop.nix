@@ -37,7 +37,9 @@
       ./base/emacs.nix
       ./base/alsa-utils.nix
       ./base/keyd.nix
+      ./base/ncdu.nix
 
+      #./graphics/gnome.nix
       ./graphics/display_manager.nix
       ./graphics/niri.nix
       ./graphics/graphics.nix
@@ -50,6 +52,7 @@
       ./graphics/nautilus.nix
       ./graphics/loupe.nix
       ./graphics/mpv.nix
+      ./graphics/baobab.nix
       ./graphics/foot.nix
       ./graphics/xwayland.nix
       ./graphics/firefox.nix
@@ -63,11 +66,13 @@
       ./graphics/crosspipe.nix
       ./graphics/easyeffects.nix
       ./graphics/appimage.nix
+      ./graphics/appimage-run.nix
       ./graphics/gnome-decoder.nix
       ./graphics/screen_shot.nix
       ./graphics/gnome-text-editor.nix
+      ./graphics/motrix-next.nix
       ./graphics/libnotify.nix
-      #./graphics/gnome.nix
+      ./graphics/overskride.nix
 
 
       # cli
@@ -78,7 +83,11 @@
       #./modules/tun2socks.nix
       #./modules/rust.nix
       #./modules/lilypond.nix
+      #./modules/pandoc.nix
+      ./modules/playerctl.nix
       ./modules/tts.nix
+      ./modules/kvm-qemu.nix
+      ./modules/android.nix
       ./modules/tcpdump.nix
       ./modules/ydict.nix
       ./modules/typst.nix
@@ -94,13 +103,13 @@
       ./modules/ffmpeg.nix
       ./modules/nethogs.nix
       ./modules/podman.nix
+      ./modules/llama-cpp.nix
 
       # gui
-      ./modules/gram.nix
       ./modules/steam.nix
+      ./modules/tor.nix
       ./modules/mangohud.nix
       ./modules/gamemode_gamescope.nix
-      ./modules/telegram-desktop.nix
       ./modules/zotero.nix
       ./modules/sqlitebrowser.nix
       ./modules/fragments.nix
@@ -116,6 +125,8 @@
       ./modules/qbittorrent.nix
       ./modules/upscaler.nix
       ./modules/obs.nix
+      #./modules/gram.nix
+      #./modules/telegram-desktop.nix
       #./modules/musescore.nix
       #./modules/digikam.nix
       #./modules/d-spy.nix
@@ -127,32 +138,9 @@
       #./modules/sunshine.nix
       #./modules/vesktop.nix
       #./modules/rustdesk.nix
-      #./modules/pandoc.nix
     ];
 
   environment.systemPackages = with pkgs; [
-    #door-knocker
-    #pulseaudio
-    #playerctl
-    #reaper
-    #rawtherapee
-    #darktable
-    #vkdt
-    #digikam
-    #waypaper
-    #ghostty
-    #awww
-    #hyprpicker
-    #starship
-    #lm_sensors
-    #overskride
-    #appimage-run
-    #sdcv
-    #wf-recorder
-    #zed-editor
-    #biblioteca
-    #cambalache
-    #hydrus
   ];
   
   environment.shellAliases = {
