@@ -1,9 +1,6 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    hashcat
-    ffuf
-    sqlmap
-    rustscan
+    nmap
   ];
 }

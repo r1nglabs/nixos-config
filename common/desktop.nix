@@ -24,6 +24,7 @@
       ./base/alsa-utils.nix
       ./base/keyd.nix
       ./base/ncdu.nix
+      ./base/nmap.nix
 
       #./graphics/gnome.nix
       ./graphics/display_manager.nix
