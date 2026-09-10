@@ -109,7 +109,6 @@
       ./modules/gmetronome.nix
       ./modules/qbittorrent.nix
       ./modules/obs.nix
-      #./modules/upscaler.nix
       #./modules/tor.nix
       #./modules/gram.nix
       #./modules/telegram-desktop.nix

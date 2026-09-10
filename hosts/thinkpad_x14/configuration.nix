@@ -13,7 +13,7 @@
     "xe.enable_psr=0"
   ];
 
-  networking.hostName = "li";
+  networking.hostName = "mercury";
   networking.networkmanager.wifi.backend = "wpa_supplicant";
 
   # 扬声器没声音 bug
