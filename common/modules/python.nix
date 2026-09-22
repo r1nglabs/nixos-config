@@ -4,9 +4,12 @@
     (python3.withPackages (ps: with ps; [
       requests
       tomlkit
+      tomli-w
       numpy
       pillow
+      qrcode
       matplotlib
+      opencv-python
       pycryptodome
     ]))
 

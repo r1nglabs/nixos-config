@@ -18,7 +18,6 @@
       ./base/yazi.nix
       ./base/brightnessctl.nix
       ./base/btop.nix
-      ./base/bintools.nix
       ./base/v2raya.nix
       ./base/emacs.nix
       ./base/alsa-utils.nix
@@ -60,6 +59,8 @@
       ./graphics/motrix-next.nix
       ./graphics/libnotify.nix
       ./graphics/overskride.nix
+      ./graphics/walker.nix
+      ./graphics/elephant.nix
 
       # cli
       #./modules/sshd.nix
@@ -126,6 +127,9 @@
     ];
 
   environment.systemPackages = with pkgs; [
+    # (builtins.getFlake "github:areofyl/fetch").packages.${pkgs.system}.default
+    tmatrix
+    cmatrix
   ];
   
   environment.shellAliases = {
