@@ -36,7 +36,6 @@
     };
   };
 
-  #systemd.user.services.awww
   systemd.user.services.fcitx5-uwsm = {
     description = "Fcitx5 daemon managed via UWSM";
     wantedBy = [ "graphical-session.target" ];
@@ -51,19 +50,6 @@
     };
   };
 
-  #systemd.user.services.mako-uwsm = {
-    #description = "Mako daemon managed via UWSM";
-    #wantedBy = [ "graphical-session.target" ];
-    #partOf = [ "graphical-session.target" ];
-    #after = [ "graphical-session.target" ];
-
-    #serviceConfig = {
-      #ExecStart = "${pkgs.mako}/bin/mako";
-      #Restart = "on-failure";
-      #Slice = "app.slice";
-    #};
-  #};
- 
   systemd.user.services.noctalia-uwsm = {
     description = "Noctalia-Shell managed via UWSM";
     wantedBy = [ "graphical-session.target" ];
@@ -87,9 +73,8 @@
     };
 
     serviceConfig = {
-      ExecStart = "${pkgs.noctalia-shell}/bin/noctalia-shell";
+      ExecStart = "${pkgs.noctalia}/bin/noctalia";
       Restart = "on-failure";
-      #Slice = "app.slice";
       Slice = "session.slice";
     };
   };

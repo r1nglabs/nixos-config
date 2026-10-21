@@ -91,6 +91,7 @@
       ./modules/nethogs.nix
       ./modules/podman.nix
       ./modules/llama-cpp.nix
+      ./modules/mitmproxy.nix
 
       # gui
       ./modules/steam.nix
@@ -105,11 +106,13 @@
       ./modules/wireshark.nix
       ./modules/typesetter.nix
       ./modules/zathura.nix
-      ./modules/splayer.nix
       ./modules/lingot.nix
       ./modules/gmetronome.nix
       ./modules/qbittorrent.nix
       ./modules/obs.nix
+      ./modules/darktable.nix
+      ./modules/rawtherapee.nix
+      #./modules/splayer.nix
       #./modules/tor.nix
       #./modules/gram.nix
       #./modules/telegram-desktop.nix
