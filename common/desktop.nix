@@ -112,6 +112,7 @@
       ./modules/obs.nix
       ./modules/darktable.nix
       ./modules/rawtherapee.nix
+      ./modules/libreoffice.nix
       #./modules/splayer.nix
       #./modules/tor.nix
       #./modules/gram.nix
@@ -119,7 +120,6 @@
       #./modules/musescore.nix
       #./modules/digikam.nix
       #./modules/d-spy.nix
-      #./modules/libreoffice.nix
       #./modules/fluffychat.nix
       #./modules/apostrophe.nix
       #./modules/bottles.nix

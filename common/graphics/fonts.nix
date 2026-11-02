@@ -15,6 +15,8 @@
       noto-fonts-color-emoji
       dejavu_fonts
       wqy_zenhei
+      corefonts  # 微软核心字体，如 Arial、Times New Roman
+      vista-fonts # 微软雅黑等
     ];
     fontconfig = {
       enable = true;
