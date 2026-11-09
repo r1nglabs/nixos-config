@@ -8,9 +8,11 @@
   system.stateVersion = "26.05";
 
 
-  # 修复屏幕随机位置闪烁像素线
   boot.kernelParams = [
+    # 修复屏幕随机位置闪烁像素线
     "xe.enable_psr=0"
+    # 修复偶尔卡死
+    "xe.enable_panel_replay=0"
   ];
 
   networking.hostName = "mercury";
